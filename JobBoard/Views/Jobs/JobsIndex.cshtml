@@ -1,0 +1,21 @@
+
+@{
+  Layout = "_Layout";
+}
+<div class="col-md-8 offset-md-2">
+
+  <h1 class="text-center">Jobs Index</h1>
+  <h2 class="text-center"> Number of Jobs logged : @Model.Count </h2>
+  <ul class="list-group">
+    @foreach (var jobs in Model)
+  { 
+    <li class="list-group-item">Id: @jobs.Id</li>
+    <li class="list-group-item">Title: @jobs.Title</li>
+    <li class="list-group-item">Description: @jobs.Description</li>
+    <li class="list-group-item">Contact: @jobs.Contact</li>
+
+    <a href="/jobs/@jobs.Id"><button class="btn btn-success btn-lg btn-block">Edit</button></a>
+  <br>
+  }
+  </ul>
+</div>

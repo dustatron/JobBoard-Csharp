@@ -1,0 +1,22 @@
+  
+@{
+  Layout = "_Layout";
+}
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+
+    <h1 class="text-center">Show Jobs</h1>
+    <ul class="list-group">
+      <li class="list-group-item">Id: @Model.Id</li>
+      <li class="list-group-item">Title: @Model.Title</li>
+      <li class="list-group-item">Description: @Model.Description</li>
+      <li class="list-group-item">Contact: @Model.Contact</li>
+    <ul>
+
+    <a href="/jobs/@Model.Id/edit"><button class="btn btn-success">Edit</button></a>
+
+    <form action="/jobs/delete/@Model.Id" method="post">
+      <button class="btn btn-danger">Delete</button>
+    </form>
+  </div>
+</div>
